@@ -21,6 +21,10 @@
 		D416A1021BB9D1AC0025A96B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D416A0E41BB9D1AC0025A96B /* UIKit.framework */; };
 		D416A10A1BB9D1AC0025A96B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D416A1081BB9D1AC0025A96B /* InfoPlist.strings */; };
 		D416A10C1BB9D1AC0025A96B /* OverdueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D416A10B1BB9D1AC0025A96B /* OverdueTests.m */; };
+		D416A1171BB9D3080025A96B /* CCAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D416A1161BB9D3080025A96B /* CCAddTaskViewController.m */; };
+		D416A11D1BB9D34F0025A96B /* CCEditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D416A11C1BB9D34F0025A96B /* CCEditTaskViewController.m */; };
+		D416A1201BB9D3A40025A96B /* CCDetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D416A11F1BB9D3A40025A96B /* CCDetailTaskViewController.m */; };
+		D47F9F141BBB1E3700B63F41 /* CCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = D47F9F131BBB1E3700B63F41 /* CCTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		D416A1071BB9D1AC0025A96B /* OverdueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OverdueTests-Info.plist"; sourceTree = "<group>"; };
 		D416A1091BB9D1AC0025A96B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D416A10B1BB9D1AC0025A96B /* OverdueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OverdueTests.m; sourceTree = "<group>"; };
+		D416A1151BB9D3080025A96B /* CCAddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAddTaskViewController.h; sourceTree = "<group>"; };
+		D416A1161BB9D3080025A96B /* CCAddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAddTaskViewController.m; sourceTree = "<group>"; };
+		D416A11B1BB9D34F0025A96B /* CCEditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditTaskViewController.h; sourceTree = "<group>"; };
+		D416A11C1BB9D34F0025A96B /* CCEditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEditTaskViewController.m; sourceTree = "<group>"; };
+		D416A11E1BB9D3A40025A96B /* CCDetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailTaskViewController.h; path = ../CCDetailTaskViewController.h; sourceTree = "<group>"; };
+		D416A11F1BB9D3A40025A96B /* CCDetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDetailTaskViewController.m; path = ../CCDetailTaskViewController.m; sourceTree = "<group>"; };
+		D47F9F121BBB1E3700B63F41 /* CCTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTask.h; sourceTree = "<group>"; };
+		D47F9F131BBB1E3700B63F41 /* CCTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +124,16 @@
 		D416A0E61BB9D1AC0025A96B /* Overdue */ = {
 			isa = PBXGroup;
 			children = (
-				D416A0EF1BB9D1AC0025A96B /* CCAppDelegate.h */,
-				D416A0F01BB9D1AC0025A96B /* CCAppDelegate.m */,
 				D416A0F21BB9D1AC0025A96B /* Main.storyboard */,
 				D416A0F51BB9D1AC0025A96B /* CCViewController.h */,
 				D416A0F61BB9D1AC0025A96B /* CCViewController.m */,
+				D416A1151BB9D3080025A96B /* CCAddTaskViewController.h */,
+				D416A1161BB9D3080025A96B /* CCAddTaskViewController.m */,
+				D416A11E1BB9D3A40025A96B /* CCDetailTaskViewController.h */,
+				D416A11F1BB9D3A40025A96B /* CCDetailTaskViewController.m */,
+				D416A11B1BB9D34F0025A96B /* CCEditTaskViewController.h */,
+				D416A11C1BB9D34F0025A96B /* CCEditTaskViewController.m */,
+				D47F9F111BBB1DF700B63F41 /* Models */,
 				D416A0F81BB9D1AC0025A96B /* Images.xcassets */,
 				D416A0E71BB9D1AC0025A96B /* Supporting Files */,
 			);
@@ -126,6 +143,8 @@
 		D416A0E71BB9D1AC0025A96B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D416A0EF1BB9D1AC0025A96B /* CCAppDelegate.h */,
+				D416A0F01BB9D1AC0025A96B /* CCAppDelegate.m */,
 				D416A0E81BB9D1AC0025A96B /* Overdue-Info.plist */,
 				D416A0E91BB9D1AC0025A96B /* InfoPlist.strings */,
 				D416A0EC1BB9D1AC0025A96B /* main.m */,
@@ -150,6 +169,15 @@
 				D416A1081BB9D1AC0025A96B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D47F9F111BBB1DF700B63F41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D47F9F121BBB1E3700B63F41 /* CCTask.h */,
+				D47F9F131BBB1E3700B63F41 /* CCTask.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D416A0F11BB9D1AC0025A96B /* CCAppDelegate.m in Sources */,
+				D416A1171BB9D3080025A96B /* CCAddTaskViewController.m in Sources */,
 				D416A0ED1BB9D1AC0025A96B /* main.m in Sources */,
 				D416A0F71BB9D1AC0025A96B /* CCViewController.m in Sources */,
+				D47F9F141BBB1E3700B63F41 /* CCTask.m in Sources */,
+				D416A1201BB9D3A40025A96B /* CCDetailTaskViewController.m in Sources */,
+				D416A11D1BB9D34F0025A96B /* CCEditTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +489,7 @@
 				D416A1111BB9D1AC0025A96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D416A1121BB9D1AC0025A96B /* Build configuration list for PBXNativeTarget "OverdueTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +498,7 @@
 				D416A1141BB9D1AC0025A96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
